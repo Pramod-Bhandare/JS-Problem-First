@@ -1,12 +1,10 @@
-function Hide() {
-    let para = document.getElementById("mypara");
-    let btn = document.querySelector("button");
+let names = ["Pramod", "Ashwini", "Pitty", "Rahul"];
+let index = 0; 
 
-    if (para.style.display === "none") {
-        para.style.display = "block";   
-        btn.textContent = "🙈 Hide Text"; 
-    } else {
-        para.style.display = "none";
-        btn.textContent = "👁 Show Text";
-    }
+function changeName() {
+    let para = document.getElementById("mypara");
+
+    para.textContent = "Hi! I am " + names[index];
+
+    index = (index + 1) % names.length;
 }
