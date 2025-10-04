@@ -1,9 +1,15 @@
 function Hide() {
     let para = document.getElementById("mypara");
-    
-    if (para.style.display === "none") {
-        para.style.display = "block";  // Show paragraph
+
+    if (para.style.opacity === "0") {
+        para.style.opacity = "1";
+        para.style.transform = "scale(1)";
+        para.style.display = "block";
     } else {
-        para.style.display = "none";   // Hide paragraph
+        para.style.opacity = "0";
+        para.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            para.style.display = "none";
+        }, 300); // wait for animation
     }
 }
