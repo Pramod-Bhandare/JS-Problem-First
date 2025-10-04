@@ -1,15 +1,12 @@
 function Hide() {
     let para = document.getElementById("mypara");
+    let btn = document.querySelector("button");
 
-    if (para.style.opacity === "0") {
-        para.style.opacity = "1";
-        para.style.transform = "scale(1)";
-        para.style.display = "block";
+    if (para.style.display === "none") {
+        para.style.display = "block";   
+        btn.textContent = "🙈 Hide Text"; 
     } else {
-        para.style.opacity = "0";
-        para.style.transform = "scale(0.9)";
-        setTimeout(() => {
-            para.style.display = "none";
-        }, 300); // wait for animation
+        para.style.display = "none";
+        btn.textContent = "👁 Show Text";
     }
 }
